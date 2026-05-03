@@ -75,16 +75,16 @@
       .textType("PLAIN")
       .plainText(`${number}`)
       .fontSize(30)
-      .textAlign("RIGHT")
-      .textAlignVertical("BOTTOM")
       .scale({ x: item.scale.x, y: item.scale.y })
       .position(position)
       .fillColor("red")
       .strokeColor("black")
-      .strokeWidth(1)
+      .strokeWidth(3)
       .strokeOpacity(1)
+      .textAlign("RIGHT")
+      .textAlignVertical("BOTTOM")
       .attachedTo(item.id)
-      .locked(true)
+      .locked(false)
       .name("Token Counter")
       .metadata({ [getPluginId("metadata")]: { enabled: true } })
       .layer("NOTE")
@@ -132,7 +132,7 @@
         OBR.scene.items.updateItems([counter], (items) => {
           items[0].text.style.fillColor = color;
           items[0].text.style.strokeColor =
-            color === "yellow" ? "black" : "white";
+            color === "white";
         });
       }
     }
