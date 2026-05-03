@@ -88,7 +88,7 @@
       .name("Token Counter")
       .metadata({ [getPluginId("metadata")]: { enabled: true } })
       .layer("NOTE")
-      .disableHit(true)
+      .disableHit(false)
       .build();
 
     OBR.scene.items.addItems([txt]);
@@ -131,8 +131,6 @@
       } else {
         OBR.scene.items.updateItems([counter], (items) => {
           items[0].text.style.fillColor = color;
-          items[0].text.style.strokeColor =
-            color === "white";
         });
       }
     }
