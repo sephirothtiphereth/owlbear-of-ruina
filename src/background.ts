@@ -18,7 +18,7 @@ OBR.onReady(() => {
         filter: {
           every: [
             { key: "type", value: "IMAGE" },
-            { key: "layer", value: "CHARACTER" },
+            { key: "layer", value: "ATTACHMENT" },
           ],
           permissions: ["UPDATE"],
         },
