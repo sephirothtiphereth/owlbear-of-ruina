@@ -67,15 +67,15 @@
       (item.grid.offset.y / item.image.height) * item.scale.y * height;
     // Apply offset so the text origin is the top left
     const position = {
-      x: item.position.x - offsetX,
-      y: item.position.y - offsetY,
+      x: item.position.x - offsetX + ((item.scale.x * width) * 0.625),
+      y: item.position.y - offsetY - ((item.scale.y * height) * 0.25),
     };
 
     const txt = buildText()
       .textType("PLAIN")
       .plainText(`${number}`)
       .fontSize(30)
-      .scale({ x: item.scale.x, y: item.scale.y })
+      .scale({ x: item.scale.x * width, y: item.scale.y * height })
       .position(position)
       .fillColor("red")
       .strokeColor("black")
@@ -84,11 +84,11 @@
       .textAlign("RIGHT")
       .textAlignVertical("BOTTOM")
       .attachedTo(item.id)
-      .locked(false)
+      .locked(true)
       .name("Token Counter")
       .metadata({ [getPluginId("metadata")]: { enabled: true } })
       .layer("NOTE")
-      .disableHit(false)
+      .disableHit(true)
       .build();
 
     OBR.scene.items.addItems([txt]);
