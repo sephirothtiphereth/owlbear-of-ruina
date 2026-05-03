@@ -68,7 +68,7 @@
     // Apply offset so the text origin is the top left
     const position = {
       x: item.position.x - offsetX + ((item.scale.x * width) * 0.625),
-      y: item.position.y - offsetY - ((item.scale.y * height) * 0.25),
+      y: item.position.y - offsetY + ((item.scale.y * height) * 0.3),
     };
 
     const txt = buildText()
