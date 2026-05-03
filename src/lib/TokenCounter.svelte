@@ -75,7 +75,7 @@
       .textType("PLAIN")
       .plainText(`${number}`)
       .fontSize(30)
-      .scale({ x: item.scale.x * width, y: item.scale.y * height })
+      .scale({ x: item.scale.x, y: item.scale.y })
       .position(position)
       .fillColor("red")
       .strokeColor("black")
@@ -252,6 +252,6 @@
 
 <style lang="postcss">
   .swatch {
-    @apply rounded-full w-5 h-5 self-center justify-self-center active:opacity-50;
+    @apply rounded-full w-6 h-5 self-center justify-self-center active:opacity-50;
   }
 </style>
