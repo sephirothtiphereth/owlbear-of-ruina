@@ -77,7 +77,7 @@
       .fontSize(30)
       .scale({ x: item.scale.x, y: item.scale.y })
       .position(position)
-      .fillColor("red")
+      .fillColor("white")
       .strokeColor("black")
       .strokeWidth(3)
       .strokeOpacity(1)
