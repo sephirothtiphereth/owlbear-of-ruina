@@ -1,0 +1,9 @@
+{
+  "name": "Token Counter Revamped",
+  "version": "3.0.0",
+  "manifest_version": 1,
+  "author": "Agathe Nachtnebel",
+  "icon": "/icon.svg",
+  "background_url": "/background.html",
+  "description": "Credits to Max Paulus for the original version of this extension, made this more readable."
+}
